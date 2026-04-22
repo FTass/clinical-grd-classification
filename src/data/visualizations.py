@@ -11,8 +11,9 @@ class Visualizations:
 
     @staticmethod
     def countplot(df, target, ):
+        # ].str.split(' - ').str[0]
         plt.figure(figsize=(6, 4))
-        codes = df[target].str.split(' - ').str[0]
+        codes = df[target]
         top = codes.value_counts().head( 10 ).index
         sns.countplot(
             # data=df, 
